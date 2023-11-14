@@ -34,13 +34,34 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
+
+                    ShowConfig(config)     //Clarity Project ID Shows here
+
+                    /*Greeting("Android")*/
+
                 }
             }
         }
     }
 }
 
+
+//Clarity Project ID methods here
+
+@Composable
+fun ShowConfig(config: ClarityConfig, modifier: Modifier = Modifier) {
+    Text(
+        text = config.toString(),
+        modifier = modifier
+    )
+}
+
+// End of Clarity Method
+
+
+
+
+/*
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
@@ -48,7 +69,11 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
         modifier = modifier
     )
 }
+*/
 
+
+
+/*
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
@@ -56,3 +81,4 @@ fun GreetingPreview() {
         Greeting("Android")
     }
 }
+*/
